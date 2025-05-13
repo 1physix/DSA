@@ -95,4 +95,17 @@ def display2(head): #same display function, traversal is the same
 """Inserting at any point apart from at the head is an O(n) function, but inserting at the head is an O(1), since we only have to go to the head"""
 
 def insert_at_beginning(head, val, tail):
-    new_node = DoubleNode()
+    new_node = DoubleNode(val, next = head)
+    head.prev = new_node
+    return(new_node, tail)
+
+head, tail = insert_at_beginning(head, tail, 100)
+#display(head)
+
+
+"""Insert at head - O(n), since we have to go to the end of the linked list to add another node"""
+def insert_at_end(head, val, tail):
+    curr = head
+    while curr:
+        curr = curr.next
+    
