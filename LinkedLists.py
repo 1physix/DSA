@@ -40,7 +40,7 @@ def search(head, val):
             return True
         curr = curr.next
 
-search(head1, 3)
+#search(head1, 3)
 
 
 
@@ -91,3 +91,8 @@ def display2(head): #same display function, traversal is the same
     print(" <-> ".join(elements))
 
 #display2(head2)
+
+"""Inserting at any point apart from at the head is an O(n) function, but inserting at the head is an O(1), since we only have to go to the head"""
+
+def insert_at_beginning(head, val, tail):
+    new_node = DoubleNode()
